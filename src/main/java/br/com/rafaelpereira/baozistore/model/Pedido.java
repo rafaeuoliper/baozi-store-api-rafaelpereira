@@ -1,0 +1,51 @@
+package br.com.rafaelpereira.baozistore.model;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "pedidos")
+public class Pedido {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private Long clienteId;
+    private Long produtoId;
+    private Integer quantidade;
+
+    public Pedido() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Long getClienteId() {
+        return clienteId;
+    }
+
+    public Long getProdutoId() {
+        return produtoId;
+    }
+
+    public Integer getQuantidade() {
+        return quantidade;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setClienteId(Long clienteId) {
+        this.clienteId = clienteId;
+    }
+
+    public void setProdutoId(Long produtoId) {
+        this.produtoId = produtoId;
+    }
+
+    public void setQuantidade(Integer quantidade) {
+        this.quantidade = quantidade;
+    }
+}
